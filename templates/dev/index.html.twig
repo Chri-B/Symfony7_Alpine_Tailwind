@@ -1,21 +1,30 @@
 {% extends 'base.html.twig' %} {% block title %}Hello DevController!{% endblock %} {% block body %}
 <div class="example-wrapper">
-  <p></p>
-
-  <h1>no tailwind</h1>
   <h1 class="text-3xl font-bold underline">with tailwind</h1>
 
   <br />
   <br />
   <br />
 
-  <div x-data="{ open: false }">
-    <button @click="open = ! open">Toggle Content</button>
+  <div x-data="dropdown">
+    <button x-bind="trigger">A</button>
 
-    <div x-show="open">Content...</div>
+    <div x-bind="dialogue">aaaaaaaaaaaa</div>
   </div>
 
-  <div inline-datepicker data-date="02/25/2022"></div>
+  <br>
+  <button x-data @click="$event.target.remove()">Remove Me</button>
+  <br>
 
+
+  <button x-data="ciao" x-text="label" x-bind="farecose"></button>
+
+  <div x-data>
+    <button @click="$dispatch('foo')">Click me for dispatch</button>
+  </div>
+
+  <div x-data @foo.window="console.log('foo was dispatched')">...</div>
+
+  </div>
 </div>
 {% endblock %}
