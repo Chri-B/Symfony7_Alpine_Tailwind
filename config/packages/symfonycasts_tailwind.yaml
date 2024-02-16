@@ -1,0 +1,6 @@
+## php bin/console config:dump symfonycasts_tailwind
+
+# symfonycasts_tailwind:
+#   binary_version: "v3.3.0"
+#   config_file: "tailwind.config.js"
+#   input_css: 'assets/styles/other.css'

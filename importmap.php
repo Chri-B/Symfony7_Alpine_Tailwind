@@ -20,8 +20,5 @@ return [
     ],
     'alpinejs' => [
         'version' => '3.13.5',
-    ],
-    '@popperjs/core' => [
-        'version' => '2.11.8',
-    ],
+    ]
 ];
