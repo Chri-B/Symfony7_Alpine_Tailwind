@@ -14,7 +14,7 @@ window.Alpine = Alpine;
 Alpine.data("dropdown", dropdown);
 
 Alpine.data("ciao", () => ({
-    label: "ciaone",
+  label: "click to console log",
   farecose: {
     ["@click"]() {
       console.log("xxxxxxxxx");

@@ -5,9 +5,18 @@
   <br />
   <br />
   <br />
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+    <div class="shrink-0">
+      <img class="h-12 w-12" src="{{ asset('img/img.png') }}" alt="ChitChat Logo">
+    </div>
+    <div>
+      <div class="text-xl font-medium text-black">ChitChat</div>
+      <p class="text-slate-500">You have a new message!</p>
+    </div>
+  </div>
 
   <div x-data="dropdown">
-    <button x-bind="trigger">A</button>
+    <button x-bind="trigger">click to show</button>
 
     <div x-bind="dialogue">aaaaaaaaaaaa</div>
   </div>
@@ -17,13 +26,16 @@
   <br>
 
 
+  <br>
   <button x-data="ciao" x-text="label" x-bind="farecose"></button>
+  <br>
+  <br>
 
   <div x-data>
     <button @click="$dispatch('foo')">Click me for dispatch</button>
   </div>
 
-  <div x-data @foo.window="console.log('foo was dispatched')">...</div>
+  <div x-data @foo.window="console.log('foo was dispatched')">questo div reagisce al dispatch propagato fino alla "window"</div>
 
   </div>
 </div>
