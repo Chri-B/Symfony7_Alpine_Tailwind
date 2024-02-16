@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %} {% block title %}Hello DevController!{% endblock %} {% block body %}
+<div class="example-wrapper">
+  <p></p>
+
+  <h1>no tailwind</h1>
+  <h1 class="text-3xl font-bold underline">with tailwind</h1>
+
+  <br />
+  <br />
+  <br />
+
+  <div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle Content</button>
+
+    <div x-show="open">Content...</div>
+  </div>
+
+  <div inline-datepicker data-date="02/25/2022"></div>
+
+</div>
+{% endblock %}
