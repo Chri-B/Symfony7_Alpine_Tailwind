@@ -10,7 +10,9 @@ php bin/console importmap:install
 
 ### To run the project, simply use **(*)**:
 ```
-php bin/console importmap:install
+symfony server:start
+or
+symfony serve
 ```
 
 ### **(*)** assicurarsi di avere un file .symfony.local.yaml con questa configurazione:
