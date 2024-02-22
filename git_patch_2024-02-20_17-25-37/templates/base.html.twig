@@ -20,10 +20,9 @@
   </head>
   <body class="h-full">
     <header>
-      {# <div x-data="header">
+      <div x-data="header">
         <h1 x-text="header" x-uppercase></h1>
-      </div> #}
-      <div x-data :class="$store.liked.on && 'bg-cyan-200'">div con sfondo nero</div>
+      </div>
     </header>
     {% block body %}{% endblock %}
   </body>
