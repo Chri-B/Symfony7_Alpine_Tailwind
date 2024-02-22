@@ -19,11 +19,6 @@ document.addEventListener("alpine:init", () => {
 
   // es gestione del like in pagina
   Alpine.store("liked", {
-    init() {
-      // qui posso inizializzare il valore del like in base a parametri in pagina o qualche valore?
-      // this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    },
-
     on: false,
 
     toggle() {

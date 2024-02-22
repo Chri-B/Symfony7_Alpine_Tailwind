@@ -3,18 +3,25 @@ https://alpinejs.dev/advanced/extending#via-script-tag #}
 {{ importmap(["dev", "app"]) }}
 {% endblock %} {% endblock %} {% block body %}
 
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" x-data="buttonClick">
   <button
     type="button"
     class="flex justify-center rounded-md  px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-    x-data="chunk_add_like"
-    :class="$store.liked.on ? 'bg-cyan-200 hover:bg-cyan-400' : 'bg-neutral-200 hover:bg-neutral-400'"
-    @click="addLike"
+    :class="{'bg-cyan-200 hover:bg-cyan-400': $store.liked.on, 'bg-neutral-200 hover:bg-neutral-400': !$store.liked.on}"
+    @click="toggleLike"
+    x-data="button2"
   >
   Like
   </button>
+  <div x-data x-init="$store.liked.on = {{ liked }}">
+  </div>
 </div>
 
+<div x-data="test">
 
+  <button @click="remove">Remove Text</button>
+
+  <span x-ref="text">Hello 👋</span>
 </div>
+
 {% endblock %}

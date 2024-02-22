@@ -13,6 +13,7 @@ class DevController extends AbstractController
     {
         return $this->render('dev/index.html.twig', [
             'controller_name' => 'DevController',
+            'liked' => true
         ]);
     }
 }
